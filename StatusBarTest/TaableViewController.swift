@@ -29,7 +29,7 @@ class TaableViewController: UIViewController {
 
     @IBAction func addPost(_ sender: UIButton) {
         tableViewData.append((names[Int(arc4random_uniform(3))], posts[Int(arc4random_uniform(3))]))
-        var tableViewAnimation = UITableViewRowAnimation.automatic
+        var tableViewAnimation = UITableViewRowAnimation.fade
         if counter > 5 {
             counter = 0
         }
@@ -50,8 +50,7 @@ class TaableViewController: UIViewController {
             break
         }
         tableView.insertRows(at: [IndexPath(row: tableViewData.count - 1, section: 0)], with: UITableViewRowAnimation.fade)
-        tableView.separatorStyle = .none
-
+        
         counter += 1
     }
 

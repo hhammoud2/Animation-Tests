@@ -159,6 +159,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-iJ-dQ1">
                                 <rect key="frame" x="194" y="441" width="27" height="25"/>
+                                <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="like_icon"/>
                                 <state key="selected" image="liked_icon"/>
                                 <connections>
@@ -200,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E77-GA-yye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="959"/>
+            <point key="canvasLocation" x="1263.768115942029" y="958.69565217391312"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vfG-S9-ru5">

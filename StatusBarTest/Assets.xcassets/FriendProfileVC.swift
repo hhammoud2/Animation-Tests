@@ -22,6 +22,8 @@ class FriendProfileVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(FriendProfileVC.likeProfile))
         tap.numberOfTapsRequired = 2
         profilePicture.addGestureRecognizer(tap)
+
+        likeButton.tintColor = .clear
     }
     
     @objc func likeProfile() {
@@ -44,29 +46,11 @@ class FriendProfileVC: UIViewController {
         } else {
             likeLabel.text = "Liked"
             if match {
-                self.likeButton.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-                let originX = self.likeButton.center.x
-                let originY = self.likeButton.center.y
-
-                self.likeButton.setImage(#imageLiteral(resourceName: "PostLikeRed"), for: .normal)
-//                UIView.animate(withDuration: (0.5), animations: {
-                    self.likeButton.isEnabled = false
-                    let bounceAnimation = CABasicAnimation(keyPath: "position")
-                    bounceAnimation.autoreverses = true
-                    bounceAnimation.repeatCount = 1
-                    bounceAnimation.fromValue = [originX + 2.5, originY]
-                    bounceAnimation.toValue = [originX - 2.5, originY]
-                    bounceAnimation.duration = 0.1
-//                    bounceAnimation.isRemovedOnCompletion = true
-//                    bounceAnimation.
-                    self.likeButton.layer.add(bounceAnimation, forKey: "bounce")
-//                }, completion: { (_) in
-                    self.likeButton.isEnabled = true
+                self.likeButton.setImage(#imageLiteral(resourceName: "matched"), for: .normal)
+                self.likeButton.bounce {
                     self.likeButton.setImage(#imageLiteral(resourceName: "like_icon"), for: .normal)
-                    self.likeButton.transform = CGAffineTransform.identity
                     self.likeLabel.text = "Like"
-//                })
-
+                }
             } else {
                 likeButton.isSelected = true
                 UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
@@ -78,5 +62,21 @@ class FriendProfileVC: UIViewController {
                 })
             }
         }
+    }
+}
+
+extension UIButton {
+    func bounce(completion: () -> Void) {
+        self.setImage(#imageLiteral(resourceName: "matched"), for: .normal)
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.1
+        animation.autoreverses = true
+        animation.repeatCount = 2
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x, y: self.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x, y: self.center.y - 5))
+
+        self.layer.add(animation, forKey: "bounce")
+
+        completion()
     }
 }
