@@ -54,6 +54,12 @@ class TaableViewController: UIViewController {
         counter += 1
     }
 
+    @IBAction func deletePost(_ sender: UIButton) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        tableViewData.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+
     @IBAction func clearTable(_ sender: UIButton) {
         tableViewData.removeAll()
         tableView.reloadData()
@@ -75,6 +81,7 @@ extension TaableViewController: UITableViewDataSource, UITableViewDelegate {
         }
 
         cell.configureCell(name: names[Int(arc4random_uniform(3))], post: posts[Int(arc4random_uniform(3))])
+        
         return cell
     }
 }

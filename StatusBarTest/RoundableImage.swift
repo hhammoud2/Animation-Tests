@@ -19,7 +19,6 @@ class RoundableImage: UIImageView {
     }
 
     func shakeAnimation() {
-        print("SHAKA")
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.05
         animation.repeatCount = 5
