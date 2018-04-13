@@ -49,27 +49,30 @@ class FriendProfileVC: UIViewController {
                 let originY = self.likeButton.center.y
 
                 self.likeButton.setImage(#imageLiteral(resourceName: "PostLikeRed"), for: .normal)
-                UIView.animate(withDuration: (0.125*6), animations: {
+//                UIView.animate(withDuration: (0.5), animations: {
+                    self.likeButton.isEnabled = false
                     let bounceAnimation = CABasicAnimation(keyPath: "position")
                     bounceAnimation.autoreverses = true
-                    bounceAnimation.repeatCount = 3
-                    bounceAnimation.fromValue = [originX, originY]
-                    bounceAnimation.toValue = [originX, originY - 20]
-                    bounceAnimation.duration = 0.125
-                    bounceAnimation.isRemovedOnCompletion = true
+                    bounceAnimation.repeatCount = 1
+                    bounceAnimation.fromValue = [originX + 2.5, originY]
+                    bounceAnimation.toValue = [originX - 2.5, originY]
+                    bounceAnimation.duration = 0.1
+//                    bounceAnimation.isRemovedOnCompletion = true
+//                    bounceAnimation.
                     self.likeButton.layer.add(bounceAnimation, forKey: "bounce")
-                }, completion: { (_) in
+//                }, completion: { (_) in
+                    self.likeButton.isEnabled = true
                     self.likeButton.setImage(#imageLiteral(resourceName: "like_icon"), for: .normal)
                     self.likeButton.transform = CGAffineTransform.identity
                     self.likeLabel.text = "Like"
-                })
+//                })
 
             } else {
                 likeButton.isSelected = true
-                UIView.animate(withDuration: 0.25, delay: 0, options: .curveLinear, animations: {
-                    self.likeButton.transform = CGAffineTransform(scaleX: 2, y: 2)
+                UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+                    self.likeButton.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
                 }, completion: { (_) in
-                    UIView.animate(withDuration: 0.25, delay: 0, options: .curveLinear, animations: {
+                    UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
                         self.likeButton.transform = CGAffineTransform.identity
                     }, completion: nil)
                 })

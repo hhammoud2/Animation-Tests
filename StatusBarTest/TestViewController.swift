@@ -10,16 +10,21 @@ import UIKit
 
 class TestViewController: UIViewController {
 
-    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var profilePicture: RoundableImage!
     @IBOutlet weak var likeButton: UIButton!
     var isLiked = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(TestViewController.addPulse))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(TestViewController.shakeProfile))
         profilePicture.addGestureRecognizer(tap)
+        profilePicture.isUserInteractionEnabled = true
 
+    }
+
+    @objc func shakeProfile() {
+        profilePicture.shakeAnimation()
     }
 
     @objc func addPulse() {
@@ -33,10 +38,10 @@ class TestViewController: UIViewController {
             likeButton.isSelected = false
         } else {
             likeButton.isSelected = true
-            UIView.animate(withDuration: 0.25, delay: 0, options: .curveLinear, animations: {
-                self.likeButton.transform = CGAffineTransform(scaleX: 2, y: 2)
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+                self.likeButton.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             }, completion: { (_) in
-                UIView.animate(withDuration: 0.25, delay: 0, options: .curveLinear, animations: {
+                UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
                     self.likeButton.transform = CGAffineTransform.identity
                 }, completion: nil)
             })

@@ -22,6 +22,8 @@ class TaableViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+
         // Do any additional setup after loading the view.
     }
 
@@ -47,7 +49,8 @@ class TaableViewController: UIViewController {
         default:
             break
         }
-        tableView.insertRows(at: [IndexPath(row: tableViewData.count - 1, section: 0)], with: tableViewAnimation)
+        tableView.insertRows(at: [IndexPath(row: tableViewData.count - 1, section: 0)], with: UITableViewRowAnimation.fade)
+        tableView.separatorStyle = .none
 
         counter += 1
     }

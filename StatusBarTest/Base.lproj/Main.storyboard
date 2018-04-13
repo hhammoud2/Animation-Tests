@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="73" width="414" height="614"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="100" id="dUh-sl-cIu" customClass="PostCell" customModule="StatusBarTest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="100" id="dUh-sl-cIu" customClass="PostCell" customModule="StatusBarTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dUh-sl-cIu" id="OC4-Ar-2sW">
@@ -163,7 +163,6 @@
                                 <state key="selected" image="liked_icon"/>
                                 <connections>
                                     <action selector="likeButtonTapped:" destination="zBW-46-jPW" eventType="touchUpInside" id="Hk1-cX-0CI"/>
-                                    <action selector="likeButtonTapped:" destination="SdX-HV-JhK" eventType="touchUpInside" id="eGy-Hx-DEt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtZ-bK-LIc">
