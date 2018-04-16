@@ -29,7 +29,6 @@ class CustomInteractor: UIPercentDrivenInteractiveTransition {
         let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeDown(_:)))
         swipeDownGesture.direction = .down
         swipeDownGesture.delegate = self
-        print(view)
         view.addGestureRecognizer(swipeDownGesture)
     }
 
@@ -64,12 +63,10 @@ class CustomInteractor: UIPercentDrivenInteractiveTransition {
 }
 extension CustomInteractor: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        print(gestureRecognizer, otherGestureRecognizer)
         return true
     }
 
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        print(gestureRecognizer)
         return true
     }
 }

@@ -69,11 +69,11 @@ extension UIButton {
     func bounce(completion: () -> Void) {
         self.setImage(#imageLiteral(resourceName: "matched"), for: .normal)
         let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.1
+        animation.duration = 0.15
         animation.autoreverses = true
         animation.repeatCount = 2
         animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x, y: self.center.y))
-        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x, y: self.center.y - 5))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x, y: self.center.y - 15))
 
         self.layer.add(animation, forKey: "bounce")
 

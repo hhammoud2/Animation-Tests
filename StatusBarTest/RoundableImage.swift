@@ -11,7 +11,6 @@ import UIKit
 class RoundableImage: UIImageView {
 
     override func layoutSubviews() {
-        print(self.frame)
         super.layoutSubviews()
         self.layer.cornerRadius = self.frame.width / 2
         self.clipsToBounds = true

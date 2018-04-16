@@ -84,4 +84,14 @@ extension TaableViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? PostCell else { return }
+        cell.selectionImage.isHidden = false
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? PostCell else { return }
+        cell.selectionImage.isHidden = true
+    }
 }

@@ -26,7 +26,6 @@ class Pulsing: CALayer {
 
     init(initialPulseScale: Float, nextPulseAfter: TimeInterval, duration: TimeInterval, radius: CGFloat, numberOfPulses: Float, position: CGPoint, backgroundColor: UIColor) {
         super.init()
-        print("CREATE")
         self.backgroundColor = backgroundColor.cgColor
         self.contentsScale = UIScreen.main.scale
         self.opacity = 0
@@ -40,12 +39,8 @@ class Pulsing: CALayer {
         self.numberOfPulses = numberOfPulses
         self.position = position
 
-//        DispatchQueue.global(qos: .default).async {
             self.setupAnimationGroup()
-//            DispatchQueue.main.async {
-                self.add(self.animationGroup, forKey: "pulse")
-//            }
-//        }
+            self.add(self.animationGroup, forKey: "pulse")
     }
 
     func createScaleAnimation() -> CABasicAnimation{

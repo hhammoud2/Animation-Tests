@@ -11,11 +11,14 @@ import UIKit
 class PostCell: UITableViewCell {
 
     @IBOutlet weak var profileImage: RoundableImage!
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var nameView: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var postLabel: UILabel!
+    @IBOutlet weak var selectionImage: UIImageView!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         // Initialization code
         profileImage.image = #imageLiteral(resourceName: "Profile Image")
     }
@@ -25,15 +28,18 @@ class PostCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+
+
     override func layoutSubviews() {
+        nameLabel.sizeToFit()
+        postLabel.sizeToFit()
         super.layoutSubviews()
-        textView.sizeToFit()
-        nameView.sizeToFit()
+
     }
 
     func configureCell(name: String, post: String) {
-        nameView.text = name
-        textView.text = post
+        nameLabel.text = name
+        postLabel.text = post
     }
 }
 

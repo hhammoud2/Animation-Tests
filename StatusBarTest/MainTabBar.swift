@@ -16,29 +16,10 @@ class MainTabBar: UITabBarController {
         super.viewDidLoad()
         for vc in self.viewControllers! {
             if let navControl = vc as? UINavigationController {
-                print("Found a nav")
                 navControl.delegate = self
             }
         }
-        print(self.navigationController?.modalPresentationStyle.rawValue)
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 extension MainTabBar: UINavigationControllerDelegate {
