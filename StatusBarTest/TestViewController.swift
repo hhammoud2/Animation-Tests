@@ -16,7 +16,6 @@ class TestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let tap = UITapGestureRecognizer(target: self, action: #selector(TestViewController.shakeProfile))
         profilePicture.addGestureRecognizer(tap)
         profilePicture.isUserInteractionEnabled = true
@@ -48,4 +47,42 @@ class TestViewController: UIViewController {
         }
         isLiked = !isLiked
     }
+
+    @IBAction func switchTabs(_ sender: UIButton) {
+        let tabBarController = self.tabBarController
+        guard let numberOfTabs = tabBarController?.viewControllers?.count else { return }
+        guard let selectedIndex = tabBarController?.selectedIndex else { return }
+
+        // Remove the UIBarBackground item
+        guard let tabBarItems = tabBarController?.tabBar.subviews.filter({ (view) -> Bool in
+            return view.isKind(of: NSClassFromString("UITabBarButton")!)
+        }) else { return }
+
+        // Get the subview for the tab we are transitioning to
+        let tabBarSelectedSubview = tabBarItems[selectedIndex + 1]
+
+        // Get the image view on the icon for that tab
+        let tabBarSelectedImageView = tabBarSelectedSubview.subviews.first
+        tabBarSelectedImageView?.contentMode = .center
+        if selectedIndex + 1 < numberOfTabs {
+            self.bounce(view: tabBarSelectedImageView!)
+            tabBarController?.selectedIndex = selectedIndex + 1
+        }
+    }
+
+    func bounce(view: UIView) {
+        let animation = CASpringAnimation(keyPath: "position")
+
+
+        animation.duration = 0.25
+        animation.autoreverses = true
+        animation.repeatCount = 2
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x, y: view.center.y))
+
+        // Bounce distance
+        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x, y: view.center.y - 10))
+
+        view.layer.add(animation, forKey: "bounce")
+    }
+
 }

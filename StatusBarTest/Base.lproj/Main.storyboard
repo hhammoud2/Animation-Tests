@@ -308,6 +308,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m1-W4-a0w">
+                                <rect key="frame" x="158" y="595" width="97" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="S8U-fD-S9t"/>
+                                    <constraint firstAttribute="width" constant="97" id="yB1-Wx-IUV"/>
+                                </constraints>
+                                <state key="normal" title="Switch Tabs">
+                                    <color key="titleColor" red="0.97244364019999996" green="0.97260981800000001" blue="0.97243314979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchTabs:" destination="SdX-HV-JhK" eventType="touchUpInside" id="hVD-th-CGm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -318,7 +332,10 @@
                             <constraint firstItem="syQ-V1-TyB" firstAttribute="top" secondItem="5j3-2q-ReA" secondAttribute="bottom" constant="100" id="KSy-F5-vwy"/>
                             <constraint firstItem="5W2-JQ-qcN" firstAttribute="centerX" secondItem="syQ-V1-TyB" secondAttribute="centerX" id="TeC-Al-m1S"/>
                             <constraint firstItem="7er-g3-JU3" firstAttribute="bottom" secondItem="5W2-JQ-qcN" secondAttribute="bottom" constant="130" id="TiN-Ku-ez8"/>
+                            <constraint firstItem="3m1-W4-a0w" firstAttribute="centerX" secondItem="udk-6f-QHh" secondAttribute="centerX" id="f6y-le-Oh2"/>
                             <constraint firstItem="7er-g3-JU3" firstAttribute="trailing" secondItem="syQ-V1-TyB" secondAttribute="trailing" constant="107" id="gpq-9u-yZn"/>
+                            <constraint firstItem="7er-g3-JU3" firstAttribute="bottom" secondItem="3m1-W4-a0w" secondAttribute="bottom" constant="48" id="maW-8Y-uVO"/>
+                            <constraint firstItem="3m1-W4-a0w" firstAttribute="top" secondItem="5W2-JQ-qcN" secondAttribute="bottom" constant="38" id="sJ2-PL-IzD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7er-g3-JU3"/>
                     </view>
