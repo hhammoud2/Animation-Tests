@@ -21,6 +21,12 @@ class PostCell: UITableViewCell {
         self.selectionStyle = .none
         // Initialization code
         profileImage.image = #imageLiteral(resourceName: "Profile Image")
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.cancelsTouchesInView = true
+        profileImage.isUserInteractionEnabled = true
+        profileImage.addGestureRecognizer(tap)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,6 +46,10 @@ class PostCell: UITableViewCell {
     func configureCell(name: String, post: String) {
         nameLabel.text = name
         postLabel.text = post
+    }
+
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        print("PROFILE")
     }
 }
 

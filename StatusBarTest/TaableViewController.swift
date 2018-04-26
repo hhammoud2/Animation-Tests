@@ -24,6 +24,7 @@ class TaableViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -88,6 +89,7 @@ extension TaableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? PostCell else { return }
         cell.selectionImage.isHidden = false
+        print("SELECT TABLE CELL!")
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

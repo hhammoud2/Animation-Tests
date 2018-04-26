@@ -74,13 +74,13 @@ class TestViewController: UIViewController {
         let animation = CASpringAnimation(keyPath: "position")
 
 
-        animation.duration = 0.25
+        animation.duration = 0.2
         animation.autoreverses = true
         animation.repeatCount = 2
         animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x, y: view.center.y))
 
         // Bounce distance
-        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x, y: view.center.y - 10))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x, y: view.center.y - 15))
 
         view.layer.add(animation, forKey: "bounce")
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00BE768209256E2006DBBA3 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00BE767209256E2006DBBA3 /* MyCollectionViewController.swift */; };
+		F00BE76E20925FA9006DBBA3 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00BE76D20925FA9006DBBA3 /* CustomFlowLayout.swift */; };
 		F00C542F207E7AC800B4C312 /* FriendProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C542E207E7AC800B4C312 /* FriendProfileVC.swift */; };
 		F016A68A207D176C00BB4F6B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016A689207D176C00BB4F6B /* TestViewController.swift */; };
 		F016A68C207D18FD00BB4F6B /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016A68B207D18FD00BB4F6B /* Pulsing.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00BE767209256E2006DBBA3 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		F00BE76D20925FA9006DBBA3 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		F00C542E207E7AC800B4C312 /* FriendProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendProfileVC.swift; path = Assets.xcassets/FriendProfileVC.swift; sourceTree = "<group>"; };
 		F016A689207D176C00BB4F6B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F016A68B207D18FD00BB4F6B /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				F016A68F207D310800BB4F6B /* TaableViewController.swift */,
 				F016A691207D330F00BB4F6B /* PostCell.swift */,
 				F00C542E207E7AC800B4C312 /* FriendProfileVC.swift */,
+				F00BE767209256E2006DBBA3 /* MyCollectionViewController.swift */,
+				F00BE76D20925FA9006DBBA3 /* CustomFlowLayout.swift */,
 			);
 			path = StatusBarTest;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			files = (
 				F06A96322076BB4600EEFE1E /* CustomInteractor.swift in Sources */,
 				F016A690207D310800BB4F6B /* TaableViewController.swift in Sources */,
+				F00BE768209256E2006DBBA3 /* MyCollectionViewController.swift in Sources */,
 				F016A68C207D18FD00BB4F6B /* Pulsing.swift in Sources */,
 				F016A68E207D2EDB00BB4F6B /* RoundableImage.swift in Sources */,
 				F04A9FB92073D98F00B0A51C /* ViewController.swift in Sources */,
@@ -185,6 +192,7 @@
 				F06A962E2076980C00EEFE1E /* MainTabBar.swift in Sources */,
 				F04A9FB72073D98F00B0A51C /* AppDelegate.swift in Sources */,
 				F06A963020769BF600EEFE1E /* VviewController.swift in Sources */,
+				F00BE76E20925FA9006DBBA3 /* CustomFlowLayout.swift in Sources */,
 				F016A692207D330F00BB4F6B /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
