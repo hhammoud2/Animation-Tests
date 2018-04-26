@@ -275,6 +275,140 @@
             </objects>
             <point key="canvasLocation" x="3874" y="1179"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="2Jh-Jp-4KN">
+            <objects>
+                <viewController id="M2i-4a-ucx" customClass="HapticViewController" customModule="StatusBarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e6t-Tx-CkS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-Px-XBZ">
+                                <rect key="frame" x="20" y="333" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="0oT-g9-uHD"/>
+                                    <constraint firstAttribute="height" constant="70" id="HF0-Dl-XPH"/>
+                                </constraints>
+                                <state key="normal" title="ImpactM">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="impactMedium:" destination="M2i-4a-ucx" eventType="touchUpInside" id="X4m-bG-LWI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-OV-3Si">
+                                <rect key="frame" x="20" y="241" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Zf4-6a-rqE"/>
+                                    <constraint firstAttribute="height" constant="70" id="oh3-vK-Pil"/>
+                                </constraints>
+                                <state key="normal" title="ImpactL">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="impactLight:" destination="M2i-4a-ucx" eventType="touchUpInside" id="S7G-wP-lcD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnA-mv-REl">
+                                <rect key="frame" x="20" y="424" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="RK0-Ak-wIU"/>
+                                    <constraint firstAttribute="height" constant="70" id="Ytb-5e-0YB"/>
+                                </constraints>
+                                <state key="normal" title="ImpactH">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="impactHeavy:" destination="M2i-4a-ucx" eventType="touchUpInside" id="M3u-1w-Eic"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTZ-wd-5xp">
+                                <rect key="frame" x="172" y="333" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="BBK-Aj-Tta"/>
+                                    <constraint firstAttribute="width" constant="70" id="ffs-Q6-g4d"/>
+                                </constraints>
+                                <state key="normal" title="Selection">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selection:" destination="M2i-4a-ucx" eventType="touchUpInside" id="JDb-B3-QBB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP2-AO-E6V">
+                                <rect key="frame" x="324" y="333" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="TBi-Mj-4qp"/>
+                                    <constraint firstAttribute="height" constant="70" id="vGv-XE-zfL"/>
+                                </constraints>
+                                <state key="normal" title="Warning">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="warning:" destination="M2i-4a-ucx" eventType="touchUpInside" id="yLJ-rp-rlc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27x-Xd-fZS">
+                                <rect key="frame" x="324" y="241" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8JT-Rv-Xwp"/>
+                                    <constraint firstAttribute="height" constant="70" id="jwz-Ra-sBs"/>
+                                </constraints>
+                                <state key="normal" title="Success">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="success:" destination="M2i-4a-ucx" eventType="touchUpInside" id="TTb-fL-xRK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMa-3J-7Ms">
+                                <rect key="frame" x="324" y="424" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="CnJ-Ti-8eC"/>
+                                    <constraint firstAttribute="height" constant="70" id="l8O-LF-zaR"/>
+                                </constraints>
+                                <state key="normal" title="Error">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="error:" destination="M2i-4a-ucx" eventType="touchUpInside" id="L6e-ts-xI3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rQB-pe-w8d" firstAttribute="trailing" secondItem="HMa-3J-7Ms" secondAttribute="trailing" constant="20" id="4ym-0b-i0F"/>
+                            <constraint firstItem="rQB-pe-w8d" firstAttribute="trailing" secondItem="27x-Xd-fZS" secondAttribute="trailing" constant="20" id="9US-Ch-NgS"/>
+                            <constraint firstItem="rQB-pe-w8d" firstAttribute="trailing" secondItem="KP2-AO-E6V" secondAttribute="trailing" constant="20" id="CC5-dn-6h0"/>
+                            <constraint firstItem="HMa-3J-7Ms" firstAttribute="top" secondItem="KP2-AO-E6V" secondAttribute="bottom" constant="21" id="JAb-LZ-jko"/>
+                            <constraint firstItem="nTZ-wd-5xp" firstAttribute="leading" secondItem="Tc1-Px-XBZ" secondAttribute="trailing" constant="82" id="KA4-Gj-R6A"/>
+                            <constraint firstItem="CnA-mv-REl" firstAttribute="leading" secondItem="8BK-OV-3Si" secondAttribute="leading" id="NhN-KQ-Mcu"/>
+                            <constraint firstItem="CnA-mv-REl" firstAttribute="leading" secondItem="Tc1-Px-XBZ" secondAttribute="leading" id="R1u-fi-OUe"/>
+                            <constraint firstItem="KP2-AO-E6V" firstAttribute="leading" secondItem="nTZ-wd-5xp" secondAttribute="trailing" constant="82" id="SAE-vW-Ldk"/>
+                            <constraint firstItem="nTZ-wd-5xp" firstAttribute="centerX" secondItem="e6t-Tx-CkS" secondAttribute="centerX" id="SMy-bb-WXh"/>
+                            <constraint firstItem="KP2-AO-E6V" firstAttribute="top" secondItem="e6t-Tx-CkS" secondAttribute="topMargin" constant="313" id="Z0I-cx-O9z"/>
+                            <constraint firstItem="Tc1-Px-XBZ" firstAttribute="leading" secondItem="rQB-pe-w8d" secondAttribute="leading" constant="20" id="jBv-vH-Fxc"/>
+                            <constraint firstItem="KP2-AO-E6V" firstAttribute="top" secondItem="27x-Xd-fZS" secondAttribute="bottom" constant="22" id="nz7-sZ-z6p"/>
+                            <constraint firstItem="8BK-OV-3Si" firstAttribute="top" secondItem="rQB-pe-w8d" secondAttribute="top" constant="221" id="tGR-hX-K7v"/>
+                            <constraint firstItem="nTZ-wd-5xp" firstAttribute="centerY" secondItem="e6t-Tx-CkS" secondAttribute="centerY" id="wsN-06-7FP"/>
+                            <constraint firstItem="CnA-mv-REl" firstAttribute="top" secondItem="Tc1-Px-XBZ" secondAttribute="bottom" constant="21" id="yLW-uN-ohH"/>
+                            <constraint firstItem="Tc1-Px-XBZ" firstAttribute="top" secondItem="rQB-pe-w8d" secondAttribute="top" constant="313" id="zlE-a0-cmz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rQB-pe-w8d"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Vhi-rX-0E6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Rg-FL-YxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410.144927536232" y="-548.64130434782612"/>
+        </scene>
         <!--Test View Controller-->
         <scene sceneID="PdP-HG-ete">
             <objects>
@@ -459,6 +593,7 @@
                         <segue destination="rGk-AI-fOf" kind="relationship" relationship="viewControllers" id="fU3-ya-LTt"/>
                         <segue destination="zBW-46-jPW" kind="relationship" relationship="viewControllers" id="4h1-g2-dI0"/>
                         <segue destination="Lob-DX-Blb" kind="relationship" relationship="viewControllers" id="CBU-1a-Mr0"/>
+                        <segue destination="M2i-4a-ucx" kind="relationship" relationship="viewControllers" id="thT-SN-0JR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaB-e0-dqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
